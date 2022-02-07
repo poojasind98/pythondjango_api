@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- <h1>HELLO WORLD</h1> -->
+    {% block content %}
+    <!-- <div class="row"> -->
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>URL</th>
+          <th>Height</th>
+          <th>Width</th>
+          <th>BoxCount</th>
+        </tr>
+      {% for meme in all_memes %}
+        <tr>
+          <td>{{ meme.id }}</td>
+          <td>{{ meme.name }}</td>
+          <td>{{ meme.url }}</td>
+          <td>{{ meme.height }}</td>
+          <td>{{ meme.width }}</td>
+          <td>{{ meme.box_count}}</td>
+        </tr>
+
+
+      <!-- id:<p>{{ meme.id }}</p>
+      name:<p>{{ meme.name }}</p>
+      url:<p>{{ meme.url }}</p>
+      height:<p>{{ meme.height }}</p>
+      width<p>{{ meme.width }}</p>
+      box_count<p>{{ meme.box_count}}</p> -->
+
+      <!-- </div> -->
+
+      {% endfor %}
+      </table>
+      {% endblock %}
+  </body>
+</html>
